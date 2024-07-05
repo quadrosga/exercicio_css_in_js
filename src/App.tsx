@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components'
 
+import EstiloGlobal, { Container } from './styles'
 import Header from './components/Cabecalho'
 import Hero from './components/Hero'
 import ListaVagas from './containers/ListaVagas'
@@ -10,11 +11,12 @@ import temaMain from './components/themes/main'
 function App() {
   return (
     <ThemeProvider theme={temaMain}>
+      <EstiloGlobal />
       <Header />
       <Hero />
-      <div className="container">
+      <Container>
         <ListaVagas />
-      </div>
+      </Container>
     </ThemeProvider>
   )
 }
